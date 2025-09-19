@@ -13,6 +13,7 @@ export class LoginPage {
         this.usernameInput = page.locator('input[id="username"]')
         this.passwordInput = page.locator('input[id="password"]')
         this.signInButton = page.locator('a[id="log-in"]')
+        this.rememberMeCheckBox = page.locator('input[class="form-check-input"]')
     }
 
     async login(username: string, password: string): Promise<void> {
