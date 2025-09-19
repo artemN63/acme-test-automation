@@ -15,6 +15,6 @@ test('Successful Login validation', async ({page}) => {
     let expectedHomePageFinanceTitle = 'Financial Overview'
     let actualHomePageFinanceTitle = await homePage.homePageFinanceTabTitle.innerText()
 
-    expect(page.url()).toBe(homePage.expectedUrl)
+    expect(page).toHaveURL(homePage.expectedUrl)
     expect(actualHomePageFinanceTitle).toBe(expectedHomePageFinanceTitle)
 })
